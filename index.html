@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VIP  FANS  HOME  </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #1c1c1c;
+            color: #f4f4f4;
+            direction: rtl;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-light {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .header .icon {
+            font-size: 24px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .header .icon:hover {
+            color: #ffd700;
+        }
+
+        .movie-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 20px;
+            text-align: right;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffd700;
+        }
+
+        .movie-container {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: #ffd700 transparent;
+        }
+
+        .movie-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .movie-container::-webkit-scrollbar-thumb {
+            background-color: #ffd700;
+            border-radius: 10px;
+        }
+
+        .movie-item {
+            background-color: #292929;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 250px;
+            min-width: 250px;
+            margin: 0 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 3px solid #ffd700;
+        }
+
+        .movie-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .movie-header h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #ffd700;
+            flex-grow: 1; /* يسمح بملء المساحة المتاحة */
+            white-space: nowrap; /* يمنع الانتقال إلى سطر جديد */
+            overflow: hidden; /* يخفي النص الزائد */
+            text-overflow: ellipsis; /* يعرض ثلاثة نقاط (...) بدلاً من النص الزائد */
+        }
+
+        .movie-header .fa-play,
+        .movie-header .fa-info-circle {
+            cursor: pointer;
+            color: #ffd700; /* لون الأيقونة */
+            margin: 0 10px; /* فراغ متساوي بين الأيقونات */
+        }
+
+        .movie-popup,
+        .favorite-popup,
+        .info-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .movie-popup-content,
+        .info-popup-content {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 80%;
+            color: #ffd700;
+            overflow-y: auto;
+            max-height: 80%;
+            position: relative; /* تعديل لإضافة الأيقونة بشكل صحيح */
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 0px;
+            right: -5px;
+            background-color: ;
+            width: 100px;
+            height: 100px;
+            z-index: 10;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #ffd700; /* لون الأيقونة */
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="header">
+  
+     
+  
+    <i class="fa fa-arrow-left icon" onclick="window.location.href='https://tdrsvs.github.io/Fans-Home/';" title=""></i>
+
+
+
+</div>
+
+<div class="movie-section">
+    <h2 class="section-title">| كرتون Vip </h2>
+    <div class="movie-container">
+        <div class="movie-item" data-video="https://drive.google.com/file/d/14qmHdpjkFbR7vWJS-nxlhDPhMUJJ7Zfe/preview" data-info=" هذا الفيلم متاح حصريًا للمستخدمين المميزين في ديار المعجبين حيث يمكنهم الاستمتاع بالمحتوى قبل صدوره على الموقع 
+
+↓ قصة الفيلم ↓
+
+يتّحد قرد يحمل عصًا مع فتاة صغيرة لخوض مهمة ملحمية من أجل الخلود. وفي خضم هذه الرحلة، يقاتلان الشياطين والتنانين والآلهة، والغرور الذي ">
+            <img src="https://s01.babup.com/uploads/69875-The-Monkey-King-3-.jpeg" alt="" class="movie-image">
+            <div class="movie-header">
+                <h2> the Monkey King </h2> <!-- عنوان طويل -->
+                <i class="fa fa-play" onclick="openVideoPopup(this)"></i>
+                <i class="fa fa-info-circle" onclick="openInfoPopup(this)"></i>
+            </div>
+        </div>
+
+        <div class="movie-item" data-video="https://drive.google.com/file/d/14NBAO6XBv1s3z6vjNoaUifgIrz8T1WFw/preview" data-info="هذا الفيلم متاح حصريًا للمستخدمين المميزين في ديار المعجبين حيث يمكنهم الاستمتاع بالمحتوى قبل صدوره على الموقع 
+
+↓ قصة الفيلم ↓
+
+يتعين على نجم لعبة البيسبول التوفيق بين مسيرته الرياضية المزدحمة ودوره غير المتوقع كبطل خارق  كل ذلك بينما يرعى طفلة عملاقة تنتمي إلى جنس الوحوش، تُرى أي ضرر يمكن أن يحدث؟">
+            <img src="https://s01.babup.com/uploads/MV5BYzlhM2QwZDktNTdhOS00NGFjLTkxMzQtZmVmZDFlYzgxZjUxXkEyXkFqcGc-V1-FMjpg-UX1000-.jpg" alt="" class="movie-image">
+            <div class="movie-header">
+                <h2> Ultraman Rising  </h2>
+                <i class="fa fa-play" onclick="openVideoPopup(this)"></i>
+                <i class="fa fa-info-circle" onclick="openInfoPopup(this)"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="movie-section">
+    <h2 class="section-title">| قادم قريبا Vip</h2>
+    <div class="movie-container">
+   
+   
+        <div class="movie-item" data-video="https://drive.google.com/file/d/1Qu_XB8cAXkYqHPsRD97pbCkY7hOXCvoY/preview" data-info="هذا الفيلم متاح حصريًا للمستخدمين المميزين في ديار المعجبين حيث يمكنهم الاستمتاع بالمحتوى قبل صدوره على الموقع 
+
+↓ قصة الفيلم ↓
+
+بعد سرقة عالِم شرير لموهبتهما، يلجأ نجما كرة القدم زلاتان إبراهيموفيتش و ميغان رابينو لأربعة أطفال يحبون رياضة كرة القدم من أجل مساعدهما على استعادة قدراتهما">
+            <img src="https://s01.babup.com/uploads/MV5BNTliOGM3ODktNDIxMC00NWY3LTg5NTAtZTFkMzhkMGNjNmRhXkEyXkFqcGdeQXVyMTA5ODEyNTc5-V1-_ef94d.jpg" alt="" class="movie-image">
+            <div class="movie-header">
+                <h2> Soccer Football </h2>
+                <i class="fa fa-play" onclick="openVideoPopup(this)"></i>
+                <i class="fa fa-info-circle" onclick="openInfoPopup(this)"></i>
+            </div>
+        </div>
+   
+        <div class="movie-item" data-video="https://drive.google.com/file/d/14RtB0bWJjC3itkaa-fw9AmlQhuKF08X_/preview" data-info="هذا الفيلم متاح حصريًا للمستخدمين المميزين في ديار المعجبين حيث يمكنهم الاستمتاع بالمحتوى قبل صدوره على الموقع 
+
+↓ قصة الفيلم ↓
+
+عميلان سريان متعارضان يحاولان استعادة مادة سرية سرقها دخلاء مجهولين">
+            <img src="https://s01.babup.com/uploads/MV5BMmRjMDhhM2MtNThiYy00MmUyLWIwNzItOWY3NDk0Y2Y4Nzc2XkEyXkFqcGc-V1-.jpg" alt="" class="movie-image">
+            <div class="movie-header">
+                <h2>  Spycies  </h2> <!-- عنوان طويل -->
+                <i class="fa fa-play" onclick="openVideoPopup(this)"></i>
+                <i class="fa fa-info-circle" onclick="openInfoPopup(this)"></i>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="videoPopup" class="movie-popup">
+    <div class="movie-popup-content">
+        <span class="close-btn" onclick="closeVideoPopup()">×</span> <!-- أيقونة الإغلاق -->
+        <div class="iframe-container">
+            <div class="watermark"></div>
+            <iframe id="videoIframe" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="infoPopup" class="info-popup">
+    <div class="info-popup-content">
+        <span class="close-btn" onclick="closeInfoPopup()">×</span> <!-- أيقونة الإغلاق -->
+        <p id="infoText"></p>
+    </div>
+</div>
+
+<script>
+    const secretCode = '27500';  // رمز الصفحة السري
+    let isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+
+    function openVideoPopup(element) {
+        if (!isAuthenticated) {
+            let userCode = prompt('قم بإدخال قسيمة الأعضاء المميزين 😶');
+            if (userCode !== secretCode) {
+                alert('حسنا حسنا يبدو أنك إما أخطأت في كتابة القسيمة أو أنك لست عضوًا مميزًا في ديار المعجبين وتستخدم أرقامًا عشوائية 😗');
+                return;
+            }
+            isAuthenticated = true;
+            localStorage.setItem('isAuthenticated', 'true');
+        }
+        const videoUrl = element.parentElement.parentElement.getAttribute('data-video');
+        document.getElementById('videoIframe').src = videoUrl;
+        document.getElementById('videoPopup').style.display = 'flex';
+    }
+
+    function closeVideoPopup() {
+        document.getElementById('videoIframe').src = '';
+        document.getElementById('videoPopup').style.display = 'none';
+    }
+
+    function openInfoPopup(element) {
+        const infoText = element.parentElement.parentElement.getAttribute('data-info');
+        document.getElementById('infoText').innerText = infoText;
+        document.getElementById('infoPopup').style.display = 'flex';
+    }
+
+    function closeInfoPopup() {
+        document.getElementById('infoPopup').style.display = 'none';
+    }
+</script>
+</body>
+</html>
